@@ -7,3 +7,12 @@ function smash (words) {
 
 let words = ['hello', 'world', 'this', 'is', 'great']
 console.log(smash(words)) // returns "hello world this is great"
+
+// 03/01/2024
+// Given an array of integers, return a new array with each value doubled.
+// For example:
+// [1, 2, 3] --> [2, 4, 6]
+
+function maps(x){
+    return x.map(x => x * 2)
+}

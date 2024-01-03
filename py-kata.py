@@ -24,7 +24,7 @@ def get_grade(s1, s2, s3):
     
 print(get_grade(95, 90, 93)) # A
 
-# 02/02/2024
+# 02/01/2024
 # Write a function that accepts an integer n and a string s as parameters, and returns a string of s repeated exactly n times.
 # Examples (input -> output)
 # 6, "I"     -> "IIIIII"
@@ -34,3 +34,10 @@ def repeat_str(repeat, string):
     return string * repeat
 
 print(repeat_str(6, "I")) # IIIIII
+
+# 03/01/2024
+# It's pretty straightforward. Your goal is to create a function that removes the first and last characters of a string. You're given one parameter, the original string. You don't have to worry with strings with less than two characters.
+
+def remove_char_a(a):
+    return a[1:-1]
+print(remove_char_a("eloquent")) # loquen
