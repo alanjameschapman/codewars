@@ -67,9 +67,21 @@
 //  tricks".
 // If he doesn't get 10 hoops, return the string "Keep at it until you get it".
 
-function hoopCount (n) {
-    if (n < 10 ) return "Keep at it until you get it";
-    else return "Great, now move on to tricks";
- }
+// function hoopCount (n) {
+//     if (n < 10 ) return "Keep at it until you get it";
+//     else return "Great, now move on to tricks";
+//  }
 
-console.log(hoopCount(10));
+// console.log(hoopCount(10));
+
+// 06/01/2024
+// This kata is about multiplying a given number by eight if it is an even number and by nine otherwise.
+
+function simpleMultiplication(number) {
+    if (number % 2 == 0) return number * 8;
+    else return number * 9;
+  }
+
+  console.log(simpleMultiplication(4));
+
+  
