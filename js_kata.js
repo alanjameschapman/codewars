@@ -77,11 +77,45 @@
 // 06/01/2024
 // This kata is about multiplying a given number by eight if it is an even number and by nine otherwise.
 
-function simpleMultiplication(number) {
-    if (number % 2 == 0) return number * 8;
-    else return number * 9;
-  }
+// function simpleMultiplication(number) {
+//     if (number % 2 == 0) return number * 8;
+//     else return number * 9;
+//   }
 
-  console.log(simpleMultiplication(4));
+//   console.log(simpleMultiplication(4));
 
-  
+// 07/01/2024
+// Copilot kata
+// 7 kyu - Sum of two lowest positive integers
+// Create a function that returns the sum of the two lowest positive numbers given an array of minimum 4 positive integers.
+// No floats or non-positive integers will be passed.
+// For example, when an array is passed like [19, 5, 42, 2, 77], the output should be 7.
+// [10, 343445353, 3453445, 3453545353453] should return 3453455.
+
+// function sumTwoSmallestNumbers(numbers) {
+//   numbers.sort();
+//   return [numbers[0], numbers[1]];
+// }
+
+// console.log(sumTwoSmallestNumbers([3,2,1]));
+
+// codewars kata:
+// 8 kyu - Invert values
+// Given a set of numbers, return the additive inverse of each. Each positive becomes negatives, and the negatives become positives.
+// invert([1,2,3,4,5]) == [-1,-2,-3,-4,-5]
+// invert([1,-2,3,-4,5]) == [-1,2,-3,4,-5]
+// invert([]) == []
+// You can assume that all values are integers. Do not mutate the input array/list.
+
+// function invert(array) {
+//   let newArray = [];
+//   for (let i = 0; i < array.length; i++) {
+//     newArray.push(-array[i]);
+//   }
+//   return newArray;
+// };
+
+const invert = array => array.map(num => -num);
+
+const array = [2,2,3,4,5];
+console.log(invert(array));

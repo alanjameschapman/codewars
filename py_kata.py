@@ -116,8 +116,31 @@
 # cap = 100, on = 60, wait = 50 --> 10 # He can't fit 10 of the 50 waiting
 
 # Function to check if there is enough space on the bus
-def enough(cap, on, wait):
-    return '0' if (on + wait) <= cap else (on + wait - cap)
+# def enough(cap, on, wait):
+#     return '0' if (on + wait) <= cap else (on + wait - cap)
 
-result = enough(10, 5, 5)
-print(result)
+# result = enough(10, 5, 5)
+# print(result)
+
+# 07/01/2024
+# Copilot kata:
+# You are given two interior angles (in degrees) of a triangle.
+# Write a function to return the 3rd.
+# Note: only positive integers will be tested.
+
+def other_angle(a, b):
+    return 180 - a - b
+
+print(other_angle(30, 60))
+
+# codewars kata:
+# Very simple, given an integer or a floating-point number, find its opposite.
+# Examples:
+# 1: -1
+# 14: -14
+# -34: 34
+
+def opposite(number):
+    return -number
+
+print(opposite(3))
