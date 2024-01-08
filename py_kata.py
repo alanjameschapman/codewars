@@ -128,10 +128,10 @@
 # Write a function to return the 3rd.
 # Note: only positive integers will be tested.
 
-def other_angle(a, b):
-    return 180 - a - b
+# def other_angle(a, b):
+#     return 180 - a - b
 
-print(other_angle(30, 60))
+# print(other_angle(30, 60))
 
 # codewars kata:
 # Very simple, given an integer or a floating-point number, find its opposite.
@@ -140,7 +140,26 @@ print(other_angle(30, 60))
 # 14: -14
 # -34: 34
 
-def opposite(number):
-    return -number
+# def opposite(number):
+#     return -number
 
-print(opposite(3))
+# print(opposite(3))
+
+# 08/02/2024
+# 7 kyu - Sum of odd numbers
+# Given the triangle of consecutive odd numbers:
+#              1
+#           3     5
+#        7     9    11
+#    13    15    17    19
+# 21    23    25    27    29
+# ...
+# Calculate the sum of the numbers in the nth row of this triangle (starting at index 1) e.g.: (Input --> Output)
+# 1 -->  1
+# 2 --> 3 + 5 = 8
+# 3 --> 7 + 9 + 11 = 27
+
+def row_sum_odd_numbers(n):
+    return n**3
+
+print(row_sum_odd_numbers(3))

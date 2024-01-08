@@ -115,7 +115,43 @@
 //   return newArray;
 // };
 
-const invert = array => array.map(num => -num);
+// const invert = array => array.map(num => -num);
 
-const array = [2,2,3,4,5];
-console.log(invert(array));
+// const array = [2,2,3,4,5];
+// console.log(invert(array));
+
+// 08/01/2024
+// codewars kata
+// 8 kyu - Twice as old
+// Your function takes two arguments:
+// current father's age (years)
+// current age of his son (years)
+// Сalculate how many years ago the father was twice as old as his son (or in
+//  how many years he will be twice as old). The answer is always greater or
+//  equal to 0, no matter if it was in the past or it is in the future.
+
+// function twiceAsOld(dadYearsOld, sonYearsOld) {
+//     let dadAge = dadYearsOld - sonYearsOld;
+//     let sonAge = 0
+//     for (let i = 0; i < 500; i++) {
+//         sonAge++;
+//         dadAge++;
+//         if (dadAge == 2 * sonAge) {
+//             return Math.abs(dadAge - dadYearsOld);
+//         }
+//     }
+// }
+
+// console.log(twiceAsOld(40,2));
+
+// dadsAge = a + n
+// childAge = b + n
+// Then we can write a general formula that establishes this relationship and substitute the values from our previous expressions
+// dadsAge = 2 * childAge
+// a + n = 2 * (b + n)
+// Finally solve for n
+// a + n = 2 * (b + n)
+// a + n = 2b + 2n -n -n
+// a = n + 2b -2b -2b
+// a - 2b = n
+
