@@ -169,14 +169,55 @@ A word (string) of length 0 < str < 1000 (In javascript you may get slightly mor
 The middle character(s) of the word represented as a string.
 */
 
-function getMiddle(s) {
-    if (s.length % 2 != 0) {
-        let middle = ( s.length + 1 ) / 2;
-        return s.charAt(middle - 1);
-    } else {
-        let middle = s.length / 2
-        return s.slice(middle - 1, middle + 1);
-    }
-}
+// function getMiddle(s) {
+//     if (s.length % 2 != 0) {
+//         let middle = ( s.length + 1 ) / 2;
+//         return s.charAt(middle - 1);
+//     } else {
+//         let middle = s.length / 2
+//         return s.slice(middle - 1, middle + 1);
+//     }
+// }
 
-console.log(getMiddle('barney'));
+// console.log(getMiddle('barney'));
+
+/* 10/01/2024
+8 kyu - Correct the mistakes of the character recognition software
+Character recognition software is widely used to digitise printed texts. Thus 
+the texts can be edited, searched and stored on a computer.
+When documents (especially pretty old ones written with a typewriter), are 
+digitised character recognition softwares often make mistakes.
+Your task is correct the errors in the digitised text. You only have to handle 
+the following mistakes:
+S is misinterpreted as 5
+O is misinterpreted as 0
+I is misinterpreted as 1
+The test cases contain numbers only by mistake.
+*/
+
+//
+// function correct(string) {
+//     let newString = '';
+//     for (let i = 0; i < string.length; i++) {
+//         if (string[i] == '5') {
+//             newString += 'S';
+//         } else if (string[i] == '0') {
+//             newString += 'O';
+//         } else if (string[i] == '1') {
+//             newString += 'I';
+//         } else {
+//             newString += string[i];
+//         }
+//     }
+// }
+
+// correct = s => s.replace(/0/g,'O').replace(/1/g,'I').replace(/5/g,'S')
+
+// console.log(correct('Te5t'));
+
+// 8 kyu - Remove exclamation marks
+// ExclamationMarks which removes all exclamation marks from a given string.
+
+removeExclamationMarks = s => s.replaceAll('!', '')
+
+console.log(removeExclamationMarks('!test!'));

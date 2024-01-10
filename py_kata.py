@@ -159,25 +159,50 @@
 # 2 --> 3 + 5 = 8
 # 3 --> 7 + 9 + 11 = 27
 
-def row_sum_odd_numbers(n):
-    return n**3
+# def row_sum_odd_numbers(n):
+#     return n**3
 
-print(row_sum_odd_numbers(3))
+# print(row_sum_odd_numbers(3))
 
-# 09/02/2024
-# 7 kyu - Printer Errors
-# In a factory a printer prints labels for boxes. For one kind of boxes the printer has to use colors which, for the sake of simplicity, are named with letters from a to m.
-# The colors used by the printer are recorded in a control string. For example a "good" control string would be aaabbbbhaijjjm meaning that the printer used three times color a, four times color b, one time color h then one time color a...
-# Sometimes there are problems: lack of colors, technical malfunction and a "bad" control string is produced e.g. aaaxbbbbyyhwawiwjjjwwm with letters not from a to m.
-# You have to write a function printer_error which given a string will return the error rate of the printer as a string representing a rational whose numerator is the number of errors and the denominator the length of the control string. Don't reduce this fraction to a simpler expression.
-# The string has a length greater or equal to one and contains only letters from ato z.
-# Examples:
-# s="aaabbbbhaijjjm"
-# printer_error(s) => "0/14"
-# s="aaaxbbbbyyhwawiwjjjwwm"
-# printer_error(s) => "8/22"
+# # 09/02/2024
+# # 7 kyu - Printer Errors
+# # In a factory a printer prints labels for boxes. For one kind of boxes the printer has to use colors which, for the sake of simplicity, are named with letters from a to m.
+# # The colors used by the printer are recorded in a control string. For example a "good" control string would be aaabbbbhaijjjm meaning that the printer used three times color a, four times color b, one time color h then one time color a...
+# # Sometimes there are problems: lack of colors, technical malfunction and a "bad" control string is produced e.g. aaaxbbbbyyhwawiwjjjwwm with letters not from a to m.
+# # You have to write a function printer_error which given a string will return the error rate of the printer as a string representing a rational whose numerator is the number of errors and the denominator the length of the control string. Don't reduce this fraction to a simpler expression.
+# # The string has a length greater or equal to one and contains only letters from ato z.
+# # Examples:
+# # s="aaabbbbhaijjjm"
+# # printer_error(s) => "0/14"
+# # s="aaaxbbbbyyhwawiwjjjwwm"
+# # printer_error(s) => "8/22"
 
-def printer_error(s):
-    return str(len([i for i in s if i > "m"])) + "/" + str(len(s))
+# def printer_error(s):
+#     return str(len([i for i in s if i > "m"])) + "/" + str(len(s))
 
-print(printer_error("aaaxbbbbyyhwawiwjjjwwm"))
+# print(printer_error("aaaxbbbbyyhwawiwjjjwwm"))
+
+# 7 kyu - Remove the minimum
+# The museum of incredible dull things wants to get rid of some exhibitions.
+#  Miriam, the interior architect, comes up with a plan to remove the most
+#  boring exhibitions. She gives them a rating, and then removes the one with
+#  the lowest rating.
+# However, just as she finished rating all exhibitions, she's off to an
+#  important fair, so she asks you to write a program that tells her the
+#  ratings of the items after one removed the lowest one. Fair enough.
+# Task
+# Given an array of integers, remove the smallest value. Do not mutate the
+#  original array/list. If there are multiple elements with the same value,
+#  remove the one with a lower index. If you get an empty array/list, return
+#  an empty array/list.
+# Don't change the order of the elements that are left.
+# Examples
+# * Input: [1,2,3,4,5], output = [2,3,4,5]
+# * Input: [5,3,2,1,4], output = [5,3,2,4]
+# * Input: [2,2,1,2,1], output = [2,2,2,1]
+
+def remove_smallest(numbers):
+    a = numbers[:]
+    if a:
+        a.remove(min(a))
+    return a
