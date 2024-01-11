@@ -218,6 +218,25 @@ The test cases contain numbers only by mistake.
 // 8 kyu - Remove exclamation marks
 // ExclamationMarks which removes all exclamation marks from a given string.
 
-removeExclamationMarks = s => s.replaceAll('!', '')
+// removeExclamationMarks = s => s.replaceAll('!', '')
 
-console.log(removeExclamationMarks('!test!'));
+// console.log(removeExclamationMarks('!test!'));
+
+// 11/01/2024
+// 7 kyu - Reverse words
+// Complete the function that accepts a string parameter, and reverses each
+//  word in the string. All spaces in the string should be retained.
+// Examples
+// "This is an example!" ==> "sihT si na !elpmaxe"
+// "double  spaces"      ==> "elbuod  secaps"
+
+// reverse_words = () => { return string.reverse() };
+
+function reverseWords(string) {
+    let words = string.split(' ');
+    let reversedWords = words.map(word => word.split('').reverse().join(''));
+    return reversedWords.join(' ');
+}
+
+let string = 'Hello World!';
+console.log(reverseWords(string));

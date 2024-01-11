@@ -201,8 +201,40 @@
 # * Input: [5,3,2,1,4], output = [5,3,2,4]
 # * Input: [2,2,1,2,1], output = [2,2,2,1]
 
-def remove_smallest(numbers):
-    a = numbers[:]
-    if a:
-        a.remove(min(a))
-    return a
+# def remove_smallest(numbers):
+#     a = numbers[:]
+#     if a:
+#         a.remove(min(a))
+#     return a
+
+# print(remove_smallest([1,2,3,4,5])) # [2,3,4,5]
+# print(remove_smallest([5,3,2,1,4])) # [5,3,2,4]
+# print(remove_smallest([2,2,1,2,1])) # [2,2,2,1]
+# print(remove_smallest([])) # []
+
+# 10/02/2024
+# 7 kyu - Odd or Even?
+# Given a list of integers, determine whether the sum of its elements is odd
+#  or even.
+# Give your answer as a string matching "odd" or "even".
+# If the input array is empty consider it as: [0] (array with a zero).
+# Examples:
+# Input: [0]
+# Output: "even"
+# Input: [0, 1, 4]
+# Output: "odd"
+# Input: [0, -1, -5]
+# Output: "even"
+
+def odd_or_even(arr):
+    num_sum = 0
+    for num in arr:
+        num_sum += num
+    if num_sum % 2 == 0:
+        return "even"
+    return "odd"
+
+# def odd_or_even(arr):
+#     return 'even' if sum(arr) % 2 == 0 else 'odd'
+
+print(odd_or_even([1,2,3,5]))
