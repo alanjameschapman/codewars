@@ -232,11 +232,25 @@ The test cases contain numbers only by mistake.
 
 // reverse_words = () => { return string.reverse() };
 
-function reverseWords(string) {
-    let words = string.split(' ');
-    let reversedWords = words.map(word => word.split('').reverse().join(''));
-    return reversedWords.join(' ');
+// function reverseWords(string) {
+//     let words = string.split(' ');
+//     let reversedWords = words.map(word => word.split('').reverse().join(''));
+//     return reversedWords.join(' ');
+// }
+
+// let string = 'Hello World!';
+// console.log(reverseWords(string));
+
+// 12/01/2024
+// 8 kyu - Convert a string to an array
+// Write a function to split a string and convert it into an array of words.
+// e.g.
+// string_to_array("Robin Singh") => ["Robin", "Singh"]
+// string_to_array("CodeWars") => ["CodeWars"]
+// Note: no need to worry about punctuation
+
+function stringToArray(string) {
+    return string.split(' ');
 }
 
-let string = 'Hello World!';
-console.log(reverseWords(string));
+console.log(stringToArray('Hello World!'));

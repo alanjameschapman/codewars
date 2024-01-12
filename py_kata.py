@@ -226,15 +226,31 @@
 # Input: [0, -1, -5]
 # Output: "even"
 
-def odd_or_even(arr):
-    num_sum = 0
-    for num in arr:
-        num_sum += num
-    if num_sum % 2 == 0:
-        return "even"
-    return "odd"
-
 # def odd_or_even(arr):
-#     return 'even' if sum(arr) % 2 == 0 else 'odd'
+#     num_sum = 0
+#     for num in arr:
+#         num_sum += num
+#     if num_sum % 2 == 0:
+#         return "even"
+#     return "odd"
 
-print(odd_or_even([1,2,3,5]))
+# # def odd_or_even(arr):
+# #     return 'even' if sum(arr) % 2 == 0 else 'odd'
+
+# print(odd_or_even([1,2,3,5]))
+
+# 11/02/2024
+# 8 kyu - Is he gonna survive?
+# A hero is on his way to the castle to complete his mission. However, he's
+#  been told that the castle is surrounded with a couple of powerful dragons!
+#  each dragon takes 2 bullets to be defeated, our hero has no idea how many
+#  bullets he should carry.. Assuming he's gonna grab a specific given number
+#  of bullets and move forward to fight another specific given number of
+#  dragons, will he survive?
+# Return True if yes, False otherwise :)
+
+def hero(bullets, dragons):
+    return True if bullets >= dragons * 2 else False
+
+print(hero(10, 5)) # True
+print(hero(7, 4)) # False
