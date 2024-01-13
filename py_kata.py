@@ -262,8 +262,24 @@
 # Return True if yes, False otherwise :)
 
 # Function to check if hero can survive
-def hero(bullets, dragons):
-    return True if bullets >= dragons * 2 else False
+# def hero(bullets, dragons):
+#     return True if bullets >= dragons * 2 else False
 
-print(hero(10, 5)) # True
-print(hero(7, 4)) # False
+# print(hero(10, 5)) # True
+# print(hero(7, 4)) # False
+
+# 12/02/2024
+# 7 kyu - Vowel Count
+# Return the number (count) of vowels in the given string.
+# We will consider a, e, i, o, and u as vowels for this Kata.
+# The input string will only consist of lower case letters and/or spaces.
+
+def get_count(input_str):
+    vowels = ['a', 'e', 'i', 'o', 'u']
+    vowel_count = 0
+    for char in input_str:
+        if char in vowels:
+            vowel_count += 1
+    return vowel_count
+
+print(get_count('pill'))

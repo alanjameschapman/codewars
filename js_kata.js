@@ -249,8 +249,31 @@ The test cases contain numbers only by mistake.
 // string_to_array("CodeWars") => ["CodeWars"]
 // Note: no need to worry about punctuation
 
-function stringToArray(string) {
-    return string.split(' ');
-}
+// function stringToArray(string) {
+//     return string.split(' ');
+// }
 
-console.log(stringToArray('Hello World!'));
+// console.log(stringToArray('Hello World!'));
+
+// 13/01/2024
+// 8 kyu - Square(n) Sum
+// Complete the square sum function so that it squares each number passed into
+//  it and then sums the results together.
+// For example, for [1, 2, 2] it should return 9 because 1^2 + 2^2 + 2^2 = 9.
+// My solution:
+// function squareSum(numbers) {
+//     let sum = 0;
+//     for (let i = 0; i < numbers.length; i++) {
+//         sum += numbers[i] ** 2;
+//     }
+//     return sum;
+// }
+// Best solution:
+// function squareSum(numbers){
+//     return numbers.reduce(function(sum, n){
+//       return (n*n) + sum;
+//     }, 0)
+//   }
+
+// let numbers = [1, 2, 2];
+// console.log(squareSum(numbers));
