@@ -274,12 +274,49 @@
 # We will consider a, e, i, o, and u as vowels for this Kata.
 # The input string will only consist of lower case letters and/or spaces.
 
-def get_count(input_str):
-    vowels = ['a', 'e', 'i', 'o', 'u']
-    vowel_count = 0
-    for char in input_str:
-        if char in vowels:
-            vowel_count += 1
-    return vowel_count
+# def get_count(input_str):
+#     vowels = ['a', 'e', 'i', 'o', 'u']
+#     vowel_count = 0
+#     for char in input_str:
+#         if char in vowels:
+#             vowel_count += 1
+#     return vowel_count
 
-print(get_count('pill'))
+# print(get_count('pill'))
+
+
+# 14/02/2024
+# 8 kyu - Beginner Series #4 Cockroach
+# The cockroach is one of the fastest insects. Write a function which takes
+#  its speed in km per hour and returns it in cm per second, rounded down to
+#  the integer (= floored).
+# For example:
+# 1.08 --> 30
+# Note! The input is a Real number (actual type is language dependent) and is
+#  >= 0. The result should be an Integer.
+
+# def cockroach_speed(s):
+#     return int(s*100000/3600)
+
+# print(cockroach_speed(1.08))
+
+# 7 kyu - Is this a triangle?
+# Implement a method that accepts 3 integer values a, b, c. The method should
+#  return true if a triangle can be built with the sides of given length and
+#  false in any other case.
+# (In this case, all triangles must have surface greater than 0 to be
+#  accepted).
+# Examples:
+# Input -> Output
+# 1,2,2 -> true
+# 4,2,3 -> true
+# 2,2,2 -> true
+# 1,2,3 -> false
+# -5,1,3 -> false
+# 0,2,3 -> false
+# 1,2,9 -> false
+
+def is_triangle(a, b, c):
+    return (a + b) > c and (b + c) > a and (c + a) > b
+
+print(is_triangle(4,2,3))
