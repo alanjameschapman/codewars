@@ -333,15 +333,27 @@
 # or more days, you get $20 off your total.
 # Write a code that gives out the total amount for different days(d).
 
-def rental_car_cost(d):
-    total = 40 * d
-    if d >= 7:
-        return total - 50
-    if 3 <= d <7:
-        return total - 20
-    return total
+# def rental_car_cost(d):
+#     total = 40 * d
+#     if d >= 7:
+#         return total - 50
+#     if 3 <= d <7:
+#         return total - 20
+#     return total
 
-print(rental_car_cost(2)) # 80
-print(rental_car_cost(7)) # 230
-print(rental_car_cost(3)) # 100
+# print(rental_car_cost(2)) # 80
+# print(rental_car_cost(7)) # 230
+# print(rental_car_cost(3)) # 100
 
+
+# 16/02/2024
+# 8 kyu - Calculate average
+# Write function avg which calculates average of numbers in given list.
+# Note: Empty arrays should return 0.
+
+def find_average(array):
+    return sum(array)/len(array) if array else 0
+
+print(find_average([1,2,3,4,5])) # 3
+print(find_average([1,1,1,1,1,1,1,2])) # 1.125
+print(find_average([])) # 0
