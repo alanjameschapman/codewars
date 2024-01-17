@@ -351,9 +351,32 @@
 # Write function avg which calculates average of numbers in given list.
 # Note: Empty arrays should return 0.
 
-def find_average(array):
-    return sum(array)/len(array) if array else 0
+# def find_average(array):
+#     return sum(array)/len(array) if array else 0
 
-print(find_average([1,2,3,4,5])) # 3
-print(find_average([1,1,1,1,1,1,1,2])) # 1.125
-print(find_average([])) # 0
+# print(find_average([1,2,3,4,5])) # 3
+# print(find_average([1,1,1,1,1,1,1,2])) # 1.125
+# print(find_average([])) # 0
+
+# # 17/01/2024
+# # 7 kyu - Square Every Digit
+# # Welcome. In this kata, you are asked to square every digit of a number and
+# #  concatenate them.
+# # For example, if we run 9119 through the function, 811181 will come out,
+# #  because 9^2 is 81 and 1^2 is 1.
+# # Note: The function accepts an integer and returns an integer
+
+# def square_digits(num):
+#     return int(''.join(str(int(i)**2) for i in str(num)))
+
+# print(square_digits(9119)) # 811181
+# print(square_digits(0)) # 0
+
+# Copilot kata using list comprehension:
+# Given a list of numbers, write a function square_odd_numbers that returns a
+# new list containing the squares of all the odd numbers in the original list.
+
+def square_odd_numbers(numbers):
+    return [n**2 for n in numbers if n%2 != 0]
+
+print(square_odd_numbers([1, 2, 3, 4, 5, 6]))
