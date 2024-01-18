@@ -376,7 +376,23 @@
 # Given a list of numbers, write a function square_odd_numbers that returns a
 # new list containing the squares of all the odd numbers in the original list.
 
-def square_odd_numbers(numbers):
-    return [n**2 for n in numbers if n%2 != 0]
+# def square_odd_numbers(numbers):
+#     return [n**2 for n in numbers if n%2 != 0]
 
-print(square_odd_numbers([1, 2, 3, 4, 5, 6]))
+# print(square_odd_numbers([1, 2, 3, 4, 5, 6]))
+
+# 18/02/2024
+# 7 kyu - Friend or Foe?
+# Make a program that filters a list of strings and returns a list with only
+#  your friends name in it.
+# If a name has exactly 4 letters in it, you can be sure that it has to be a
+#  friend of yours! Otherwise, you can be sure he's not...
+# Ex: Input = ["Ryan", "Kieran", "Jason", "Yous"], Output = ["Ryan", "Yous"]
+# i.e.
+# friend ["Ryan", "Kieran", "Mark"] `shouldBe` ["Ryan", "Mark"]
+# Note: keep the original order of the names in the output.
+
+def friend(x):
+    return [name for name in x if len(name) == 4]
+
+print(friend(["Ryan", "Kieran", "Mark"]))

@@ -366,14 +366,36 @@ The test cases contain numbers only by mistake.
 // nb_year(1500, 5, 100, 5000) -> 15
 // nb_year(1500000, 2.5, 10000, 2000000) -> 10
 
-function nbYear(p0, percent, aug, p) {
-  let nb_year = 0;
-  while (p0 < p) {
-    p0 += Math.floor(p0 * (percent / 100) + aug);
-    nb_year++;
-  }
-  return nb_year;
+// function nbYear(p0, percent, aug, p) {
+//   let nb_year = 0;
+//   while (p0 < p) {
+//     p0 += Math.floor(p0 * (percent / 100) + aug);
+//     nb_year++;
+//   }
+//   return nb_year;
+// }
+
+// console.log(nbYear(1500, 5, 100, 5000));
+// console.log(nbYear(1500000, 2.5, 10000, 2000000));
+
+// 18/01/2024
+// 7 kyu - Ones and Zeros
+// Given an array of ones and zeroes, convert the equivalent binary value to an
+//  integer.
+// Eg: [0, 0, 0, 1] is treated as 0001 which is the binary representation of 1.
+// Examples:
+// Testing: [0, 0, 0, 1] ==> 1
+// Testing: [0, 0, 1, 0] ==> 2
+// Testing: [0, 1, 0, 1] ==> 5
+// Testing: [1, 0, 0, 1] ==> 9
+// Testing: [0, 0, 1, 0] ==> 2
+// Testing: [0, 1, 1, 0] ==> 6
+// Testing: [1, 1, 1, 1] ==> 15
+// Testing: [1, 0, 1, 1] ==> 11
+// However, the arrays can have varying lengths, not just limited to 4.
+
+const binaryArrayToNumber = arr => {
+  return parseInt(arr.join(''), 2);
 }
 
-console.log(nbYear(1500, 5, 100, 5000));
-console.log(nbYear(1500000, 2.5, 10000, 2000000));
+console.log(binaryArrayToNumber([0, 0, 0, 1]));
