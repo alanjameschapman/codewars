@@ -392,10 +392,10 @@
 # friend ["Ryan", "Kieran", "Mark"] `shouldBe` ["Ryan", "Mark"]
 # Note: keep the original order of the names in the output.
 
-def friend(x):
-    return [name for name in x if len(name) == 4]
+# def friend(x):
+#     return [name for name in x if len(name) == 4]
 
-print(friend(["Ryan", "Kieran", "Mark"]))
+# print(friend(["Ryan", "Kieran", "Mark"]))
 
 # 19/01/2024
 # 8 kyu - What is between?
@@ -406,5 +406,17 @@ print(friend(["Ryan", "Kieran", "Mark"]))
 # b = 4
 # --> [1, 2, 3, 4]
 
-def between(a,b):
-    return list(range(a, b+1))
+# def between(a,b):
+#     return list(range(a, b+1))
+
+# print(between(1,4))
+
+# 21/01/2024
+# 8 kyu - Function 2 - squaring an argument
+# Now you have to write a function that takes an argument and returns the
+#  square of it.
+
+def square(n):
+    return n ** 2
+
+print(square(4))

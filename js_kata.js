@@ -412,9 +412,22 @@ console.log(binaryArrayToNumber([0, 0, 0, 1]));
 // a = "abcdefghijklmnopqrstuvwxyz"
 // longest(a, a) -> "abcdefghijklmnopqrstuvwxyz"
 
-function longest(s1, s2) {
-  let s3 = s1 + s2;
-  let s4 = s3.split('').sort();
-  let s5 = s4.filter((item, index) => s4.indexOf(item) === index);
-  return s5.join('');
+// function longest(s1, s2) {
+//   let s3 = s1 + s2;
+//   let s4 = s3.split('').sort();
+//   let s5 = s4.filter((item, index) => s4.indexOf(item) === index);
+//   return s5.join('');
+// }
+
+// console.log(longest('xyaabbbccccdefww', 'xxxxyyyyabklmopq'));
+
+// 21/01/2024
+// 8 kyu - Reversed Strings
+// Complete the solution so that it reverses the string passed into it.
+// 'world'  =>  'dlrow'
+
+function solution(str) {
+  return str.split('').reverse().join('');
 }
+
+console.log(solution('string'));
