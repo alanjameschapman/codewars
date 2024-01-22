@@ -145,7 +145,7 @@
 
 # print(opposite(3))
 
-# 08/02/2024
+# 08/01/2024
 # 7 kyu - Sum of odd numbers
 # Given the triangle of consecutive odd numbers:
 #              1
@@ -165,7 +165,7 @@
 
 # print(row_sum_odd_numbers(3))
 
-# # 09/02/2024
+# # 09/01/2024
 # # 7 kyu - Printer Errors
 # # In a factory a printer prints labels for boxes. For one kind of boxes the
 #  printer has to use colors which, for the sake of simplicity, are named with
@@ -224,7 +224,7 @@
 # print(remove_smallest([2,2,1,2,1])) # [2,2,2,1]
 # print(remove_smallest([])) # []
 
-# 10/02/2024
+# 10/01/2024
 # 7 kyu - Odd or Even?
 # Given a list of integers, determine whether the sum of its elements is odd
 #  or even.
@@ -251,7 +251,7 @@
 
 # print(odd_or_even([1,2,3,5]))
 
-# 11/02/2024
+# 11/01/2024
 # 8 kyu - Is he gonna survive?
 # A hero is on his way to the castle to complete his mission. However, he's
 #  been told that the castle is surrounded with a couple of powerful dragons!
@@ -268,7 +268,7 @@
 # print(hero(10, 5)) # True
 # print(hero(7, 4)) # False
 
-# 12/02/2024
+# 12/01/2024
 # 7 kyu - Vowel Count
 # Return the number (count) of vowels in the given string.
 # We will consider a, e, i, o, and u as vowels for this Kata.
@@ -285,7 +285,7 @@
 # print(get_count('pill'))
 
 
-# 14/02/2024
+# 14/01/2024
 # 8 kyu - Beginner Series #4 Cockroach
 # The cockroach is one of the fastest insects. Write a function which takes
 #  its speed in km per hour and returns it in cm per second, rounded down to
@@ -321,7 +321,7 @@
 
 # print(is_triangle(4,2,3))
 
-# 15/02/2024
+# 15/01/2024
 # 8 kyu - Transportation on vacation
 # After a hard quarter in the office you decide to get some rest on a vacation.
 # So you will book a flight for you and your girlfriend and try to leave all
@@ -346,7 +346,7 @@
 # print(rental_car_cost(3)) # 100
 
 
-# 16/02/2024
+# 16/01/2024
 # 8 kyu - Calculate average
 # Write function avg which calculates average of numbers in given list.
 # Note: Empty arrays should return 0.
@@ -381,7 +381,7 @@
 
 # print(square_odd_numbers([1, 2, 3, 4, 5, 6]))
 
-# 18/02/2024
+# 18/01/2024
 # 7 kyu - Friend or Foe?
 # Make a program that filters a list of strings and returns a list with only
 #  your friends name in it.
@@ -416,7 +416,26 @@
 # Now you have to write a function that takes an argument and returns the
 #  square of it.
 
-def square(n):
-    return n ** 2
+# def square(n):
+#     return n ** 2
 
-print(square(4))
+# print(square(4))
+
+# 22/01/2024
+# 7 kyu - Testing 1-2-3
+# Your team is writing a fancy new text editor and you've been tasked with
+#  implementing the line numbering.
+# Write a function which takes a list of strings and returns each line
+#  prepended by the correct number.
+# The numbering starts at 1. The format is n: string. Notice the colon and
+#  space in between.
+# Examples:
+# number([]) # => []
+# number(["a", "b", "c"]) # => ["1: a", "2: b", "3: c"]
+
+def number(lines):
+    return [f"{counter}: {line}" for counter, line in enumerate(lines, start=1)]
+
+    # return [n for n in lines]
+
+print(number(['a', 'b', 'c']))

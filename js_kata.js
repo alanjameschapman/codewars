@@ -394,11 +394,11 @@ The test cases contain numbers only by mistake.
 // Testing: [1, 0, 1, 1] ==> 11
 // However, the arrays can have varying lengths, not just limited to 4.
 
-const binaryArrayToNumber = arr => {
-  return parseInt(arr.join(''), 2);
-}
+// const binaryArrayToNumber = arr => {
+//   return parseInt(arr.join(''), 2);
+// }
 
-console.log(binaryArrayToNumber([0, 0, 0, 1]));
+// console.log(binaryArrayToNumber([0, 0, 0, 1]));
 
 // 19/01/2024
 // 7 kyu - Two to One
@@ -426,8 +426,26 @@ console.log(binaryArrayToNumber([0, 0, 0, 1]));
 // Complete the solution so that it reverses the string passed into it.
 // 'world'  =>  'dlrow'
 
-function solution(str) {
-  return str.split('').reverse().join('');
+// function solution(str) {
+//   return str.split('').reverse().join('');
+// }
+
+// console.log(solution('string'));
+
+// 22/01/2024
+// 8 kyu - Grasshopper - Messi goals function
+// Messi is a soccer player with goals in three leagues:
+// LaLiga
+// Copa del Rey
+// Champions
+// Complete the goals function to return his total goals (the sum) for all three
+//  leagues.
+// Note: the parameter for this function will always be a valid number.
+// Ex:
+// goals(5,10,2) == 5+10+2 = 17
+
+function goals(laLigaGoals, copaDelReyGoals, championsLeagueGoals) {
+  return laLigaGoals + copaDelReyGoals + championsLeagueGoals;
 }
 
-console.log(solution('string'));
+console.log(goals(5,10,2));
