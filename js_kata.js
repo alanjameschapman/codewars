@@ -462,29 +462,55 @@ The test cases contain numbers only by mistake.
 // XO("zpzpzpp") => true // when no 'x' and 'o' is present should return true
 // XO("zzoo") => false
 
-// my solution
-function XO(str) {
-  let x = 0;
-  let o = 0;
-  for (let s = 0; s < str.length; s++) {
-    if (str[s].toLowerCase() === 'x') {
-      x += 1;
-    } else if (str[s].toLowerCase() === 'o') {
-      o += 1;
-    }
-  }
-  if (x === o) {
-    return true;
+// // my solution
+// function XO(str) {
+//   let x = 0;
+//   let o = 0;
+//   for (let s = 0; s < str.length; s++) {
+//     if (str[s].toLowerCase() === 'x') {
+//       x += 1;
+//     } else if (str[s].toLowerCase() === 'o') {
+//       o += 1;
+//     }
+//   }
+//   if (x === o) {
+//     return true;
+//   } else {
+//     return false;
+//   }
+// }
+
+// // best solution:
+// function XO(str) {
+//   let x = str.match(/x/gi);
+//   let o = str.match(/o/gi);
+//   return (x && x.length) === (o && o.length);
+// }
+
+// console.log(XO('xoxox'));
+
+// 24/01/2024
+// 7 kyu - Find the next perfect square!
+// You might know some pretty large perfect squares. But what about the NEXT one?
+// Complete the findNextSquare method that finds the next integral perfect
+//  square after the one passed as a parameter. Recall that an integral perfect
+//  square is an integer n such that sqrt(n) is also an integer.
+// If the parameter is itself not a perfect square then -1 should be returned.
+// You may assume the parameter is positive.
+// Examples:
+// findNextSquare(121) --> returns 144
+// findNextSquare(625) --> returns 676
+// findNextSquare(114) --> returns -1 since 114 is not a perfect
+
+function findNextSquare(sq) {
+  let intOfSq = Math.sqrt(sq);
+  if (Number.isInteger(intOfSq)) {
+    let nextInt = intOfSq+1;
+    let nextSq = nextInt*nextInt;
+    return nextSq
   } else {
-    return false;
+    return -1
   }
 }
 
-// best solution:
-function XO(str) {
-  let x = str.match(/x/gi);
-  let o = str.match(/o/gi);
-  return (x && x.length) === (o && o.length);
-}
-
-console.log(XO('xoxox'));
+console.log(findNextSquare(9));
