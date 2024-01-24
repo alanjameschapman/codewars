@@ -433,9 +433,23 @@
 # number([]) # => []
 # number(["a", "b", "c"]) # => ["1: a", "2: b", "3: c"]
 
-def number(lines):
-    return [f"{counter}: {line}" for counter, line in enumerate(lines, start=1)]
+# def number(lines):
+#     return [f"{counter}: {line}" for counter, line in enumerate(lines, start=1)]
 
-    # return [n for n in lines]
+#     # return [n for n in lines]
 
-print(number(['a', 'b', 'c']))
+# print(number(['a', 'b', 'c']))
+
+
+# 23/01/2024
+# 8 kyu - Double Char
+# Given a string, you have to return a string in which each character
+#  (case-sensitive) is repeated once.
+# double_char("String") ==> "SSttrriinngg"
+# double_char("Hello World") ==> "HHeelllloo  WWoorrlldd"
+# double_char("1234!_ ") ==> "11223344!!__  "
+
+def double_char(s):
+    return ''.join([n * 2 for n in s])
+
+print(double_char("String"))

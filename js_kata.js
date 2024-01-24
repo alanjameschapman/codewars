@@ -444,8 +444,47 @@ The test cases contain numbers only by mistake.
 // Ex:
 // goals(5,10,2) == 5+10+2 = 17
 
-function goals(laLigaGoals, copaDelReyGoals, championsLeagueGoals) {
-  return laLigaGoals + copaDelReyGoals + championsLeagueGoals;
+// function goals(laLigaGoals, copaDelReyGoals, championsLeagueGoals) {
+//   return laLigaGoals + copaDelReyGoals + championsLeagueGoals;
+// }
+
+// console.log(goals(5,10,2));
+
+// 23/01/2024
+// 7 kyu - Exes and Ohs
+// Check to see if a string has the same amount of 'x's and 'o's. The method
+//  must return a boolean and be case insensitive. The string can contain any
+//  char.
+// Examples input/output:
+// XO("ooxx") => true
+// XO("xooxx") => false
+// XO("ooxXm") => true
+// XO("zpzpzpp") => true // when no 'x' and 'o' is present should return true
+// XO("zzoo") => false
+
+// my solution
+function XO(str) {
+  let x = 0;
+  let o = 0;
+  for (let s = 0; s < str.length; s++) {
+    if (str[s].toLowerCase() === 'x') {
+      x += 1;
+    } else if (str[s].toLowerCase() === 'o') {
+      o += 1;
+    }
+  }
+  if (x === o) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
-console.log(goals(5,10,2));
+// best solution:
+function XO(str) {
+  let x = str.match(/x/gi);
+  let o = str.match(/o/gi);
+  return (x && x.length) === (o && o.length);
+}
+
+console.log(XO('xoxox'));
