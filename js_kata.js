@@ -502,15 +502,32 @@ The test cases contain numbers only by mistake.
 // findNextSquare(625) --> returns 676
 // findNextSquare(114) --> returns -1 since 114 is not a perfect
 
-function findNextSquare(sq) {
-  let intOfSq = Math.sqrt(sq);
-  if (Number.isInteger(intOfSq)) {
-    let nextInt = intOfSq+1;
-    let nextSq = nextInt*nextInt;
-    return nextSq
+// function findNextSquare(sq) {
+//   let intOfSq = Math.sqrt(sq);
+//   if (Number.isInteger(intOfSq)) {
+//     let nextInt = intOfSq+1;
+//     let nextSq = nextInt*nextInt;
+//     return nextSq
+//   } else {
+//     return -1
+//   }
+// }
+
+// console.log(findNextSquare(9));
+
+
+// 25/01/2024
+// 8 kyu - Is it a palindrome?
+// Write function isPalindrome that checks if a given string (case insensitive)
+//  is a palindrome.
+
+function isPalindrome(x) {
+  let reverse = x.split('').reverse().join('');
+  if (x.toLowerCase() === reverse.toLowerCase()) {
+    return true;
   } else {
-    return -1
+    return false;
   }
 }
 
-console.log(findNextSquare(9));
+console.log(isPalindrome('anna'));

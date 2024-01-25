@@ -472,10 +472,23 @@
 #     newstring = ''.join(newstring)
 #     return newstring
 
-# best code
-def disemvowel(s):
-    for i in "aeiouAEIOU":
-        s = s.replace(i,'')
-    return s
+# # best code
+# def disemvowel(s):
+#     for i in "aeiouAEIOU":
+#         s = s.replace(i,'')
+#     return s
 
-print(disemvowel('testing'))
+# print(disemvowel('testing'))
+
+# 25/01/2024
+# 8 kyu - Removing Elements
+# Take an array and remove every second element out of that array. Always keep
+#  the first element and start removing with the next element.
+# Example:
+# my_list = ['Keep', 'Remove', 'Keep', 'Remove', 'Keep', ...]
+# None of the arrays will be empty, so you don't have to worry about that!
+
+def remove_every_other(my_list):
+    return my_list[::2]
+
+print(remove_every_other(['Hello', 'Goodbye', 'Hello Again']))
