@@ -510,3 +510,32 @@ def litres(time):
     return m.floor(0.5 * time)
 
 print(litres(3))
+
+# 27/01/2024
+# 8 kyu - Switch it Up!
+# When provided with a number between 0-9, return it in words.
+# Input :: 1
+# Output :: "One".
+# Try using "Switch" statements.
+
+# # my code:
+# def switch_it_up(number):
+#     switcher = {
+#         0: 'Zero',
+#         1: 'One',
+#         2: 'Two',
+#         3: 'Three',
+#         4:'Four',
+#         5:'Five',
+#         6:'Six',
+#         7:'Seven',
+#         8:'Eight',
+#         9:'Nine'
+#     }
+#     return switcher.get(number)
+
+# best code:
+# def switch_it_up(number):
+#     return ["Zero","One","Two","Three","Four","Five","Six","Seven","Eight","Nine"][number]
+
+# print(switch_it_up(1))
