@@ -505,11 +505,11 @@
 # time = 6.7---> litres = 3
 # time = 11.8--> litres = 5
 
-def litres(time):
-    import math as m
-    return m.floor(0.5 * time)
+# def litres(time):
+#     import math as m
+#     return m.floor(0.5 * time)
 
-print(litres(3))
+# print(litres(3))
 
 # 27/01/2024
 # 8 kyu - Switch it Up!
@@ -539,3 +539,25 @@ print(litres(3))
 #     return ["Zero","One","Two","Three","Four","Five","Six","Seven","Eight","Nine"][number]
 
 # print(switch_it_up(1))
+
+# 28/01/2024
+# 7 kyu - Highest and Lowest
+# In this little assignment you are given a string of space separated numbers,
+#  and have to return the highest and lowest number.
+# Example:
+# high_and_low("1 2 3 4 5")  # return "5 1"
+# high_and_low("1 2 -3 4 5") # return "5 -3"
+# high_and_low("1 9 3 4 -5") # return "9 -5"
+# Notes:
+# All numbers are valid Int32, no need to validate them.
+# There will always be at least one number in the input string.
+# Output string must be two numbers separated by a single space,
+#  and highest number is first.
+
+def high_and_low(numbers):
+    numbers = numbers.split()
+    numbers = [int(n) for n in numbers]
+    return f"{max(numbers)} {min(numbers)}"
+    # return "{} {}".format(max(numbers), min(numbers))
+
+print(high_and_low("1 2 3 4 5")) # return "5 1"

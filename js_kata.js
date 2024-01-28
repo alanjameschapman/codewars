@@ -546,17 +546,17 @@ The test cases contain numbers only by mistake.
 // Another example (just to make sure it is clear):
 // gimme([5, 10, 14]) => 1
 // 10 is the number that fits between 5 and 14 and the index of 10 in the input
-//  array is 1.
+// //  array is 1.
 
-function gimme(inputArray) {
-  let sorted = inputArray.slice().sort((a, b) => a - b);
-  return inputArray.indexOf(sorted[1]);
-}
+// function gimme(inputArray) {
+//   let sorted = inputArray.slice().sort((a, b) => a - b);
+//   return inputArray.indexOf(sorted[1]);
+// }
 
-console.log(gimme(2, 3, 1));
+// console.log(gimme(2, 3, 1));
 
-// 27/01/2024
-// 8 kyu - Find the smallest integer in the array
+// // 27/01/2024
+// // 8 kyu - Find the smallest integer in the array
 // Given an array of integers your solution should find the smallest integer.
 // For example:
 // Given [34, 15, 88, 2] your solution will return 2
@@ -564,8 +564,33 @@ console.log(gimme(2, 3, 1));
 // You can assume, for the purpose of this kata, that the supplied array will
 //  not be empty.
 
-class SmallestIntegerFinder {
-  findSmallestInt(args) {
-    return Math.min(...args);
-  }
-}
+// class SmallestIntegerFinder {
+//   findSmallestInt(args) {
+//     return Math.min(...args);
+//   }
+// }
+
+// 28/01/2024
+// 8 kyu - Area or Perimeter
+// You are given the length and width of a 4-sided polygon. The polygon can
+//  either be a rectangle or a square.
+// If it is a square, return its area. If it is a rectangle, return its
+//  perimeter.
+// area_or_perimeter(6, 10) --> 32
+// area_or_perimeter(3, 3) --> 9
+
+// // my code:
+// const areaOrPerimeter = function (l, w) {
+//   if (l === w) {
+//     return l * w;
+//   } else {
+//     return 2 * (l + w);
+//   }
+// }
+
+// best code:
+const areaOrPerimeter = function(l , w) {
+  return l == w ? l*w : 2*(l + w)
+};
+
+console.log(areaOrPerimeter(3, 3))
