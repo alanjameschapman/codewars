@@ -554,10 +554,26 @@
 # Output string must be two numbers separated by a single space,
 #  and highest number is first.
 
-def high_and_low(numbers):
-    numbers = numbers.split()
-    numbers = [int(n) for n in numbers]
-    return f"{max(numbers)} {min(numbers)}"
-    # return "{} {}".format(max(numbers), min(numbers))
+# def high_and_low(numbers):
+#     numbers = numbers.split()
+#     numbers = [int(n) for n in numbers]
+#     return f"{max(numbers)} {min(numbers)}"
+#     # return "{} {}".format(max(numbers), min(numbers))
 
-print(high_and_low("1 2 3 4 5")) # return "5 1"
+# print(high_and_low("1 2 3 4 5")) # return "5 1"
+
+# 29/01/2024
+# 8 kyu - Parse nice int from char problem
+# You ask a small girl,"How old are you?" She always says, "x years old",
+# where x is a random number between 0 and 9.
+
+# Write a program that returns the girl's age (0-9) as an integer.
+
+# Assume the test input string is always a valid string. For example, the test
+# input may be "1 year old" or "5 years old". The first character in the string
+# is always a number.
+
+def get_age(age):
+    return int(age[0])
+
+print(get_age('5 years old'))
