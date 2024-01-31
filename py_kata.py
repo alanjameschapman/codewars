@@ -573,7 +573,43 @@
 # input may be "1 year old" or "5 years old". The first character in the string
 # is always a number.
 
-def get_age(age):
-    return int(age[0])
+# def get_age(age):
+#     return int(age[0])
 
-print(get_age('5 years old'))
+# print(get_age('5 years old'))
+
+# 31/01/2024
+# 6 kyu - Build Tower
+# Build Tower by the following given argument:
+# number of floors (integer and always greater than 0).
+# Tower block is represented as *
+# Python: return a list;
+# Have fun!
+# for example, a tower of 3 floors looks like below
+# [
+#   '  *  ',
+#   ' *** ',
+#   '*****'
+# ]
+
+# def tower_builder(n_floors):
+#     tower = []
+#     for i in range(1, n_floors+1):
+#         tower.append(' ' * (n_floors-i) + '*' * (2*i-1) + ' ' * (n_floors-i))
+#     return tower
+
+# print(tower_builder(2))
+
+# extra practice:
+# diamond maker
+def diamond_maker(n):
+    if n % 2 == 0 or n < 1:
+        return None
+    diamond = []
+    for i in range(1, n//2+2):
+        diamond.append(' ' * (n-i) + '*' * (2*i-1) + ' ' * (n-i))
+    for i in range(n//2, 0, -1):
+        diamond.append(' ' * (n-i) + '*' * (2*i-1) + ' ' * (n-i))
+    return diamond
+
+print(diamond_maker(5))
