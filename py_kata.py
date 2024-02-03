@@ -602,14 +602,34 @@
 
 # extra practice:
 # diamond maker
-def diamond_maker(n):
-    if n % 2 == 0 or n < 1:
-        return None
-    diamond = []
-    for i in range(1, n//2+2):
-        diamond.append(' ' * (n-i) + '*' * (2*i-1) + ' ' * (n-i))
-    for i in range(n//2, 0, -1):
-        diamond.append(' ' * (n-i) + '*' * (2*i-1) + ' ' * (n-i))
-    return diamond
+# def diamond_maker(n):
+#     if n % 2 == 0 or n < 1:
+#         return None
+#     diamond = []
+#     for i in range(1, n//2+2):
+#         diamond.append(' ' * (n-i) + '*' * (2*i-1) + ' ' * (n-i))
+#     for i in range(n//2, 0, -1):
+#         diamond.append(' ' * (n-i) + '*' * (2*i-1) + ' ' * (n-i))
+#     return diamond
 
-print(diamond_maker(5))
+# print(diamond_maker(5))
+
+# 03/02/2024
+
+# 6 kyu - Unique In Order
+# Implement the function unique_in_order which takes as argument a sequence and
+#  returns a list of items without any elements with the same value next to
+#  each other and preserving the original order of elements.
+# For example:
+# unique_in_order('AAAABBBCCDAABBB') == ['A', 'B', 'C', 'D', 'A', 'B']
+# unique_in_order('ABBCcAD')         == ['A', 'B', 'C', 'c', 'A', 'D']
+# unique_in_order([1,2,2,3,3])       == [1,2,3]
+
+def unique_in_order(iterable):
+    unique = []
+    for i in iterable:
+        if len(unique) == 0 or i != unique[-1]:
+            unique.append(i)
+    return unique
+
+print(unique_in_order('AAAABBBCCDAABBB')) # ['A', 'B', 'C', 'D', 'A', 'B']

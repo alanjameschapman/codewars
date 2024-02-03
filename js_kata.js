@@ -642,14 +642,36 @@ The test cases contain numbers only by mistake.
 //  a list, you don't have to check for null, undefined or similar.
 
 // my code:
-function minMax(arr) {
-  let sorted = arr.sort((a, b) => a - b);
-  return [sorted[0], sorted[sorted.length - 1]];
-}
-
-// best code:
-// function minMax(arr){
-//   return [Math.min(...arr), Math.max(...arr)];
+// function minMax(arr) {
+//   let sorted = arr.sort((a, b) => a - b);
+//   return [sorted[0], sorted[sorted.length - 1]];
 // }
 
-console.log(minMax([2,1,3,4,5]));
+// // best code:
+// // function minMax(arr){
+// //   return [Math.min(...arr), Math.max(...arr)];
+// // }
+
+// console.log(minMax([2,1,3,4,5]));
+
+// 03/02/2024
+// 8 kyu - Grasshopper - Summation
+// Summation
+// Write a program that finds the summation of every number from 1 to num. The
+//  number will always be a positive integer greater than 0.
+// For example:
+// summation(2) -> 3
+// 1 + 2
+// summation(8) -> 36
+// 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8
+
+// my code:
+var summation = function (num) {
+  let sum = 0;
+  for (let i = 1; i <= num; i++) {
+    sum += i;
+  }
+  return sum;
+}
+
+console.log(summation(36))
