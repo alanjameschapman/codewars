@@ -666,12 +666,31 @@ The test cases contain numbers only by mistake.
 // 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8
 
 // my code:
-var summation = function (num) {
-  let sum = 0;
-  for (let i = 1; i <= num; i++) {
-    sum += i;
-  }
-  return sum;
+// var summation = function (num) {
+//   let sum = 0;
+//   for (let i = 1; i <= num; i++) {
+//     sum += i;
+//   }
+//   return sum;
+// }
+
+// console.log(summation(36))
+
+
+// 04/02/2024
+// 8 kyu - Exclamation marks series #11: Replace all vowel to exclamation
+//  mark in the sentence
+// Description:
+// Replace all vowel to exclamation mark in the sentence. aeiouAEIOU is vowel.
+// Examples
+// replace("Hi!") === "H!!"
+// replace("!Hi! Hi!") === "!H!! H!!"
+// replace("aeiou") === "!!!!!"
+// replace("ABCDE") === "!BCD!"
+
+// my code:
+function replace(s){
+  return s.replace(/[aeiou]/gi, '!');
 }
 
-console.log(summation(36))
+console.log(replace('Hi!'));
