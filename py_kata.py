@@ -646,7 +646,22 @@
 # "is2 Thi1s T4est 3a"  -->  "Thi1s is2 3a T4est"
 # "4of Fo1r pe6ople g3ood th5e the2"  -->  "Fo1r the2 g3ood 4of th5e pe6ople"
 
-def order(sentence):
-    return " ".join(sorted(sentence.split(), key=lambda x: int("".join(filter(str.isdigit, x)))))
+# def order(sentence):
+#     return " ".join(sorted(sentence.split(), key=lambda x: int("".join(filter(str.isdigit, x)))))
 
-print(order("is2 Thi1s T4est 3a")) # "Thi1s is2 3a T4est"
+# print(order("is2 Thi1s T4est 3a")) # "Thi1s is2 3a T4est"
+
+
+# 07/02/2024
+# 8 kyu - Abbreviate a Two Word Name
+# Write a function to convert a name into initials. This kata strictly takes
+#  two words with one space in between them.
+# The output should be two capital letters with a dot separating them.
+# It should look like this:
+# Sam Harris => S.H
+# Patrick Feeney => P.F
+
+# def abbrev_name(name):
+#     return ".".join([i[0].upper() for i in name.split()])
+
+# print(abbrev_name('Dave Thingy thing'))
