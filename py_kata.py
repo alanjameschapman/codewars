@@ -665,3 +665,30 @@
 #     return ".".join([i[0].upper() for i in name.split()])
 
 # print(abbrev_name('Dave Thingy thing'))
+
+
+# 08/02/2024
+# 8 kyu - Difference of Volumes of Cuboids
+# In this simple exercise, you will create a program that will take two lists
+#  of integers, a and b. Each list will consist of 3 positive integers above 0,
+#  representing the dimensions of cuboids a and b. You must find the difference
+#  of the volumes of cuboids a and b. The volume of a cuboid is the product of
+#  its dimensions.
+# Example:
+# If the parameters are two lists of three integers each: [1, 2, 3], [2, 3, 4],
+#  the volume of a is 6 and the volume of b is 24. Therefore, the function
+#  should return 18.
+
+# my code:
+def find_difference(a, b):
+    if a[0]*a[1]*a[2] > b[0]*b[1]*b[2]:
+        return a[0]*a[1]*a[2] - b[0]*b[1]*b[2]
+    return b[0]*b[1]*b[2] - a[0]*a[1]*a[2]
+
+print(find_difference([1, 2, 3], [2, 3, 4]))
+
+# best code:
+# from numpy import prod
+
+# def find_difference(a, b):
+#     return abs(prod(a) - prod(b))

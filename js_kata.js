@@ -706,13 +706,33 @@ The test cases contain numbers only by mistake.
 // Don't forget the space after the closing parentheses!
 
 
-// // my code:
-function createPhoneNumber(numbers){
-  let format = "(xxx) xxx-xxxx";
-  for (let i = 0; i < numbers.length; i++) {
-    format = format.replace('x', numbers[i]);
-  }
-  return format;
+// // // my code:
+// function createPhoneNumber(numbers){
+//   let format = "(xxx) xxx-xxxx";
+//   for (let i = 0; i < numbers.length; i++) {
+//     format = format.replace('x', numbers[i]);
+//   }
+//   return format;
+// }
+
+// console.log(createPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]));
+
+
+// 08/02/2024
+// 8 kyu - Beginner - Reduce but Grow
+// Given a non-empty array of integers, return the result of multiplying the
+//  values together in order. Example:
+// [1, 2, 3, 4] => 1 * 2 * 3 * 4 = 24
+
+// // // my code:
+// function grow(x){
+//   return x.reduce((a, b) => a * b);
+// }
+
+// console.log(grow([1, 2, 3, 4]));
+
+function sumOfSquares(n){
+  return n.reduce((a, b) => a + b*b);
 }
 
-console.log(createPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]));
+console.log(sumOfSquares([1, 2, 3]));
