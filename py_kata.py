@@ -680,15 +680,29 @@
 #  should return 18.
 
 # my code:
-def find_difference(a, b):
-    if a[0]*a[1]*a[2] > b[0]*b[1]*b[2]:
-        return a[0]*a[1]*a[2] - b[0]*b[1]*b[2]
-    return b[0]*b[1]*b[2] - a[0]*a[1]*a[2]
+# def find_difference(a, b):
+#     if a[0]*a[1]*a[2] > b[0]*b[1]*b[2]:
+#         return a[0]*a[1]*a[2] - b[0]*b[1]*b[2]
+#     return b[0]*b[1]*b[2] - a[0]*a[1]*a[2]
 
-print(find_difference([1, 2, 3], [2, 3, 4]))
+# print(find_difference([1, 2, 3], [2, 3, 4]))
 
-# best code:
+# # best code:
 # from numpy import prod
 
 # def find_difference(a, b):
 #     return abs(prod(a) - prod(b))
+
+
+# 10/02/2024
+# 7 kyu - String ends with?
+# Complete the solution so that it returns true if the first argument(string)
+#  passed in ends with the 2nd argument (also a string).
+# Examples:
+# solution('abc', 'bc') # returns true
+# solution('abc', 'd') # returns false
+
+def solution(string, ending):
+    return string.endswith(ending)
+
+print(solution('abc', 'bc'))

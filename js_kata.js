@@ -731,8 +731,28 @@ The test cases contain numbers only by mistake.
 
 // console.log(grow([1, 2, 3, 4]));
 
-function sumOfSquares(n){
-  return n.reduce((a, b) => a + b*b);
+// function sumOfSquares(n){
+//   return n.reduce((a, b) => a + b*b);
+// }
+
+// console.log(sumOfSquares([1, 2, 3]));
+
+
+// 10/02/2024
+// 8 kyu - If you can't sleep, just count sheep!!
+// If you can't sleep, just count sheep!!
+// Task:
+// Given a non-negative integer, 3 for example, return a string with a murmur:
+// "1 sheep...2 sheep...3 sheep..."
+// Input will always be valid, i.e. no negative integers.
+
+// // // my code:
+var countSheep = function (num){
+  let murmur = '';
+  for (let i = 1; i <= num; i++) {
+    murmur += i + ' sheep...';
+  }
+  return murmur;
 }
 
-console.log(sumOfSquares([1, 2, 3]));
+console.log(countSheep(3));
