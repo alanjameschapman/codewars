@@ -747,12 +747,39 @@ The test cases contain numbers only by mistake.
 // Input will always be valid, i.e. no negative integers.
 
 // // // my code:
-var countSheep = function (num){
-  let murmur = '';
-  for (let i = 1; i <= num; i++) {
-    murmur += i + ' sheep...';
-  }
-  return murmur;
-}
+// var countSheep = function (num){
+//   let murmur = '';
+//   for (let i = 1; i <= num; i++) {
+//     murmur += i + ' sheep...';
+//   }
+//   return murmur;
+// }
 
-console.log(countSheep(3));
+// console.log(countSheep(3));
+
+// 12/02/2024
+// 6 kyu - Replace With Alphabet Position
+// Welcome.
+// In this kata you are required to, given a string, replace every letter with
+//  its position in the alphabet.
+// If anything in the text isn't a letter, ignore it and don't return it.
+// "a" = 1, "b" = 2, etc.
+// Example
+// alphabetPosition("The sunset sets at twelve o' clock.")
+// Should return "20 8 5 19 21 14 19 5 20 19 5 20 19 1 20 20 23 5 12 22 5 15 3 12
+// 15 3 11" (as a string)
+
+// // // my code:
+function alphabetPosition(text) {
+  let alphabet = 'abcdefghijklmnopqrstuvwxyz';
+  let position = '';
+  for (let i = 0; i < text.length; i++) {
+    let letter = text[i].toLowerCase();
+    if (alphabet.includes(letter)) {
+      position += alphabet.indexOf(letter) + 1 + ' ';
+    }
+  }
+  return position.trim();
+}
+  
+console.log(alphabetPosition('text'));

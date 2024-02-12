@@ -702,7 +702,40 @@
 # solution('abc', 'bc') # returns true
 # solution('abc', 'd') # returns false
 
-def solution(string, ending):
-    return string.endswith(ending)
+# def solution(string, ending):
+#     return string.endswith(ending)
 
-print(solution('abc', 'bc'))
+# print(solution('abc', 'bc'))
+
+
+# 12/02/2024
+# 7 kyu - Exes and Ohs
+# Check to see if a string has the same amount of 'x's and 'o's. The method
+#  must return a boolean and be case insensitive. The string can contain any
+#  char.
+# Examples input/output:
+# XO("ooxx") => true
+# XO("xooxx") => false
+# XO("ooxXm") => true
+# XO("zpzpzpp") => true // when no 'x' and 'o' is present should return true
+# XO("zzoo") => false
+
+# my code
+def xo(s):
+    lowers = s.lower()
+    xs = ''
+    os = ''
+    for letter in lowers:
+        if letter == 'x':
+            xs += 'x'
+        if letter == 'o':
+            os += 'y'
+    return len(xs) == len(os)
+
+# best code
+def xo(s):
+    s = s.lower()
+    return s.count('x') == s.count('o')
+
+print(xo('OoxX'))
+
