@@ -721,21 +721,38 @@
 # XO("zzoo") => false
 
 # my code
-def xo(s):
-    lowers = s.lower()
-    xs = ''
-    os = ''
-    for letter in lowers:
-        if letter == 'x':
-            xs += 'x'
-        if letter == 'o':
-            os += 'y'
-    return len(xs) == len(os)
+# def xo(s):
+#     lowers = s.lower()
+#     xs = ''
+#     os = ''
+#     for letter in lowers:
+#         if letter == 'x':
+#             xs += 'x'
+#         if letter == 'o':
+#             os += 'y'
+#     return len(xs) == len(os)
 
-# best code
-def xo(s):
-    s = s.lower()
-    return s.count('x') == s.count('o')
+# # best code
+# def xo(s):
+#     s = s.lower()
+#     return s.count('x') == s.count('o')
 
-print(xo('OoxX'))
+# print(xo('OoxX'))
 
+# 14/02/2024
+# 8 kyu - Correct the mistakes of the character recognition software
+# Character recognition software is widely used to digitise printed texts.
+#  Thus the texts can be edited, searched and stored on a computer.
+# When documents (especially pretty old ones written with a typewriter), are
+#  digitised character recognition softwares often make mistakes.
+# Your task is correct the errors in the digitised text. You only have to
+#  handle the following mistakes:
+# S is misinterpreted as 5
+# O is misinterpreted as 0
+# I is misinterpreted as 1
+# The test cases contain numbers only by mistake.
+
+def correct(string):
+    return string.replace('5', 'S').replace('0', 'O').replace('1', 'I')
+
+print(correct('5tr1ng'))
