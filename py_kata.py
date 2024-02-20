@@ -752,7 +752,26 @@
 # I is misinterpreted as 1
 # The test cases contain numbers only by mistake.
 
-def correct(string):
-    return string.replace('5', 'S').replace('0', 'O').replace('1', 'I')
+# def correct(string):
+#     return string.replace('5', 'S').replace('0', 'O').replace('1', 'I')
 
-print(correct('5tr1ng'))
+# print(correct('5tr1ng'))
+
+# 20/02/2024
+# 8 kyu - Square(n) Sum
+# Complete the square sum function so that it squares each number passed into
+#  it and then sums the results together.
+# For example, for [1, 2, 2] it should return 9 because 1^2 + 2^2 + 2^2 = 9.
+
+# my code
+# def square_sum(numbers):
+#     total = 0
+#     for n in numbers:
+#         total += n*n
+#     return total
+
+# best code
+def square_sum(numbers):
+    return sum(x ** 2 for x in numbers)
+
+print(square_sum([1, 2, 2]))

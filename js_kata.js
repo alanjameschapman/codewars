@@ -770,16 +770,31 @@ The test cases contain numbers only by mistake.
 // 15 3 11" (as a string)
 
 // // // my code:
-function alphabetPosition(text) {
-  let alphabet = 'abcdefghijklmnopqrstuvwxyz';
-  let position = '';
-  for (let i = 0; i < text.length; i++) {
-    let letter = text[i].toLowerCase();
-    if (alphabet.includes(letter)) {
-      position += alphabet.indexOf(letter) + 1 + ' ';
-    }
-  }
-  return position.trim();
-}
+// function alphabetPosition(text) {
+//   let alphabet = 'abcdefghijklmnopqrstuvwxyz';
+//   let position = '';
+//   for (let i = 0; i < text.length; i++) {
+//     let letter = text[i].toLowerCase();
+//     if (alphabet.includes(letter)) {
+//       position += alphabet.indexOf(letter) + 1 + ' ';
+//     }
+//   }
+//   return position.trim();
+// }
   
-console.log(alphabetPosition('text'));
+// console.log(alphabetPosition('text'));
+
+// 20/02/2024
+// 8 kyu - Sentence Smash
+// Write a method smash that takes an array of words and smashes them together
+//  into a sentence and returns the sentence. You can ignore any need to
+//  sanitize words or add punctuation, but you should add spaces between each
+//  word. Be careful, there shouldn't be a space at the beginning or the end of
+//  the sentence!
+
+// // // my code:
+function smash (words) {
+  return words.join(' ');
+}
+
+console.log(smash(['hello', 'world', 'this', 'is', 'great']));
