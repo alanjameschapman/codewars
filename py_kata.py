@@ -770,8 +770,23 @@
 #         total += n*n
 #     return total
 
-# best code
-def square_sum(numbers):
-    return sum(x ** 2 for x in numbers)
+# # best code
+# def square_sum(numbers):
+#     return sum(x ** 2 for x in numbers)
 
-print(square_sum([1, 2, 2]))
+# print(square_sum([1, 2, 2]))
+
+
+# 10/04/2024
+
+# 7 kyu - Reverse words
+# Complete the function that accepts a string parameter, and reverses each word
+#  in the string. All spaces in the string should be retained.
+# Examples
+# "This is an example!" ==> "sihT si na !elpmaxe"
+# "double  spaces"      ==> "elbuod secaps"
+
+def reverse_words(text):
+    return ' '.join([word[::-1] for word in text.split(' ')])
+
+print(reverse_words('This is an example!'))
