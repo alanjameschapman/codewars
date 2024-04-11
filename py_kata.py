@@ -786,7 +786,36 @@
 # "This is an example!" ==> "sihT si na !elpmaxe"
 # "double  spaces"      ==> "elbuod secaps"
 
-def reverse_words(text):
-    return ' '.join([word[::-1] for word in text.split(' ')])
+# def reverse_words(text):
+#     return ' '.join([word[::-1] for word in text.split(' ')])
 
-print(reverse_words('This is an example!'))
+# print(reverse_words('This is an example!'))
+
+# 11/04/2024
+# 8 kyu - Opposites Attract
+
+# Timmy & Sarah think they are in love, but around where they live, they will
+#  only know once they pick a flower each. If one of the flowers has an even
+#  number of petals and the other has an odd number of petals it means they
+#  are in love.
+# Write a function that will take the number of petals of each flower and
+#  return true if they are in love and false if they aren't.
+
+# def lovefunc(flower1, flower2):
+#     return (flower1+flower2) % 2 != 0
+
+# print(lovefunc(2,2))
+
+# 7 kyu - Two to One
+# Take 2 strings s1 and s2 including only letters from a to z. Return a new
+#  sorted string, the longest possible, containing distinct letters,
+#  each taken only once - coming from s1 or s2.
+# Examples:
+# a = "xyaabbbccccdefww"
+# b = "xxxxyyyyabklmopq"
+# longest(a, b) -> "abcdefklmopqwxy"
+
+def longest(S1, S2):
+    return ''.join(sorted(set(S1+S2)))
+
+print(longest('xyaabbbccccdefww', 'xxxxyyyyabklmopq'))
